@@ -1,0 +1,121 @@
+<div class="mainly">
+    <div class="navbar">
+        <div class="navbar-title">
+            <a href="#"> PLANA</a>
+        </div>
+        <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="mani">
+        <div class="lefty">
+            <div class="profile">
+                <img src="https://pics.craiyon.com/2023-10-25/b65f72d6d11a48c1bc560059cc36e31f.webp" alt="">
+            </div>
+            <div class="dashboard">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <button routerLink="/manager">Home</button>
+            </div>
+            <div class="myprofile">
+                <i class="fa fa-user-md" aria-hidden="true"></i>
+                <button>Profile</button> 
+            </div>
+            <div class="mail">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <button>Mail</button>
+            </div>
+            <div class="createevent">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                <button routerLink="/createevents">Create Event</button>
+            </div>
+            <div class="createtickets">
+              <i class="fa fa-pencil-square" aria-hidden="true"></i>
+              <button routerLink="/createtickets">Create Tickets</button>
+          </div>
+            <div class="viewevents">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <button>View Events</button>
+            </div>
+            <div class="bookings">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <button routerLink="/viewbookings">Bookings</button>
+            </div>
+            <div class="settings">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <button>Settings</button>
+            </div>
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <button routerLink="/landing">Log Out</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="hello">
+              <h1>Hello Manager!</h1>
+              <p>Here are all the events</p>
+            </div>
+            <div class="maincontent">
+              <h3>Event</h3>
+              <input type="text" placeholder="Search Events ...">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Category</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let event of events">
+                    <td>{{ event.EventID }}</td>
+                    <td>{{ event.Category }}</td>
+                    <td>{{ event.Title }}</td>
+                    <td>{{ event.Description }}</td>
+                    <td>{{ event.Price | currency:'Ksh ' }}</td>
+                    <td>{{ event.Date | date }}</td>
+                    <td>{{ event.Location }}</td>
+                    <td>
+                      <button class="edit-btn" (click)="editEvent(event)">Edit</button>
+                      <button class="delete-btn" (click)="deleteEvent(event.EventID)">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          
+    </div>
+</div>
+<div *ngIf="showModal" class="modal">
+  <div class="modal-content">
+    <h2>Edit Event</h2>
+    <form [formGroup]="editForm" (ngSubmit)="updateEvent()">
+      <label for="Category">Category:</label>
+      <input id="Category" formControlName="Category" type="text">
+      <label for="Title">Title:</label>
+      <input id="Title" formControlName="Title" type="text">
+      <label for="Description">Description:</label>
+      <textarea id="Description" formControlName="Description"></textarea>
+      <label for="Price">Price:</label>
+      <input id="Price" formControlName="Price" type="number">
+      <label for="Date">Date:</label>
+      <input id="Date" formControlName="Date" type="date">
+      <label for="Time">Time:</label>
+      <input id="Time" formControlName="Time" type="time">
+      <label for="Location">Location:</label>
+      <input id="Location" formControlName="Location" type="text">
+      <label for="EventImage">Event Image:</label>
+      <input id="EventImage" formControlName="EventImage" type="text">
+      <button type="submit">Update Event</button>
+      <button type="button" (click)="closeModal()">Cancel</button>
+    </form>
+  </div>
+</div>

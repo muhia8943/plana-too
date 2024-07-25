@@ -1,0 +1,5 @@
+CREATE PROCEDURE spGetAllTickets
+AS
+BEGIN
+    SELECT * FROM Tickets;
+END

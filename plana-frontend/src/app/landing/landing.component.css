@@ -1,0 +1,419 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 1px;
+    background-color: rgb(249, 245, 228);
+}
+.nav-links{
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+    color: salmon;
+}
+.navbar-title a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0px;
+}
+.navbar-title img{
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    
+}
+.navbar-title{
+    margin-left: 90px;
+}
+.iconsi{
+    margin-right: 90px;
+}
+.firstcontent{
+    display: flex;
+    justify-content:space-evenly;
+    margin-top: 50px;
+}
+
+.video-background {
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 98vw;
+    height: 400px;
+    object-fit: cover;
+    
+}
+.plana {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    color:rgb(255, 3, 3);
+
+}
+
+.plana h1 {
+    font-size: 45px;
+    margin-bottom: 0.5em;
+}
+
+.plana p {
+    font-size: 40px;
+    margin: 0.2em 0;
+}
+
+.plana button {
+    margin-top: 1em;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.plana button:hover {
+    background-color: #dddddd;
+}
+
+.imagez{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.others{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.others h2{
+    text-decoration: underline;
+}
+
+.thirdcontent{
+    display: flex;
+    gap: 34px;
+    justify-content: center;
+    align-items: center;
+}
+.advert{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.advert button{
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.lastly{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    background-color: rgb(30, 30, 30);
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+button:hover{
+    cursor: pointer;
+}
+.hdng{
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, rgb(231, 231, 232) , rgb(234, 231, 232));
+}
+.hdng input{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 250px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.hdng button{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 5px 20px;
+    background-color: rgba(42, 0, 196, 0.3);
+    border: none;
+    border-radius: 5px;
+
+
+}
+.btns{
+    display: flex;
+    gap: 5px;
+}
+.image-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    gap: 35px;
+    margin-top: 5px;
+}
+.image-container img{
+    border-radius: 20px;
+}
+.image-container img:hover{
+    cursor: pointer;
+}
+.image-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.image-container img {
+    width: 100vw; /* Full viewport width */
+    height: 300px; /* Fixed height for images */
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.dots {
+    text-align: center;
+    padding: 5px;
+}
+
+.dots span {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dots .active {
+    background-color: #2600ff;
+}
+
+.content {
+    padding: 20px;
+}
+.card button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.cardz button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.cardx button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.cardc button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.cardv button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.cardb button {
+    padding: 5px 10px;
+    border: none;
+    background-color: rgba(95, 62, 214, 0.3);
+    border-radius: 10px;
+    color: white;
+}
+.card{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2024/06/26/18/20/ai-generated-8855520_1280.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardb{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2021/11/17/15/23/woman-6803845_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardz{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2017/08/01/18/42/books-2567259_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardx{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2023/03/06/15/01/horse-7833668_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardc{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2020/01/28/15/43/church-4800099_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cardv{
+    height: 390px;
+    width: 200px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 1)),url(https://cdn.pixabay.com/photo/2023/07/27/21/56/giraffe-8154108_1280.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card3{
+    display: flex;
+    gap: 10px;
+    margin-top: 0px;
+    margin-bottom: 2px;
+}
+.card2{
+    margin-left: 10px;
+}
+.sdg{
+    font-size: 12px;
+}
+.start{
+    display: flex;
+    gap: 10px;
+}
+.fl{
+    display: flex;
+    gap: 20px;
+}
+.top{
+    display: flex;
+    gap: 40px;
+    background-image: linear-gradient(to right, rgb(111, 102, 249) , rgb(142, 22, 74));
+    margin-top: 40px;
+    border-radius: 10px;
+}
+.kard img{
+    height: 150px;
+    width: 200px;
+    border-radius:5px ;
+}
+.kard{
+    width: 150px;
+    margin-top: 30px;
+}
+.top1{
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 70px;
+}
+.und{
+    text-decoration: line-through;
+}
+.gkard{
+    display: flex;
+    gap: 60px;
+}
+.top1 button{
+    padding: 10px 20px;
+    background-color: rgba(149, 142, 184, 0.2);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.cimg img{
+    height: 100px;
+    width: 100px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.cultural{
+    display: flex;
+    width: 340px;
+    gap: 10px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.cats{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.cultural:hover{
+    transform:scale(1.03);
+}
+.bg h2{
+    margin-left: 15px;
+}

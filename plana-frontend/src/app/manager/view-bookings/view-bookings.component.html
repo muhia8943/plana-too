@@ -1,0 +1,81 @@
+<div class="mainly">
+    <div class="navbar">
+        <div class="navbar-title">
+            <a href="#"> PLANA</a>
+        </div>
+        <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="mani">
+        <div class="lefty">
+            <div class="profile">
+                <img src="https://pics.craiyon.com/2023-10-25/b65f72d6d11a48c1bc560059cc36e31f.webp" alt="">
+            </div>
+            <div class="dashboard">
+                <i class="fa fa-home" aria-hidden="true"></i>
+                <button routerLink="/manager">Home</button>
+            </div>
+            <div class="myprofile">
+                <i class="fa fa-user-md" aria-hidden="true"></i>
+                <button routerLink="/managerprofile">Profile</button> 
+            </div>
+            <div class="mail">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <button>Mail</button>
+            </div>
+            <div class="createevent">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                <button routerLink="/createevents">Create Event</button>
+            </div>
+            <div class="createtickets">
+                <i class="fa fa-pencil-square" aria-hidden="true"></i>
+                <button routerLink="/createtickets">Create Tickets</button>
+            </div>
+            <div class="viewevents">
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <button routerLink="/viewevents">View Events</button>
+            </div>
+            <div class="bookings">
+                <i class="fa fa-book" aria-hidden="true"></i>
+                <button routerLink="/viewbookings">Bookings</button>
+            </div>
+            <div class="settings">
+                <i class="fa fa-cogs" aria-hidden="true"></i>
+                <button>Settings</button>
+            </div>
+            <div class="logout">
+                <i class="fa fa-sign-out" aria-hidden="true"></i>
+                <button routerLink="/landing">Log Out</button>
+            </div>
+        </div>
+        <div class="content">
+            <!-- src/app/view-bookings/view-bookings.component.html -->
+<div class="bouks">
+    <h2>Event Bookings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Booking ID</th>
+          <th>User ID</th>
+          <th>Ticket ID</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.BookingID }}</td>
+          <td>{{ booking.UserID }}</td>
+          <td>{{ booking.TicketID }}</td>
+          <td> <button>CONFIRM</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+        </div>
+    </div>
+</div>

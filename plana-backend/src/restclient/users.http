@@ -1,0 +1,45 @@
+### Register a New User
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "Daniel",
+    "email": "gamesmy177@gmail.com",
+    "password": "rootpassword"
+}
+
+###
+
+### Login a User
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "eb2.56060.21@student.chuka.ac.ke",
+    "password": "rootpassword"
+}
+
+###
+
+### Get All Users
+GET http://localhost:3000/api/auth/users
+Content-Type: application/json
+
+###
+
+### Delete a User
+DELETE http://localhost:3000/api/auth/users/2
+Content-Type: application/json
+
+###
+
+### Update a User
+PUT http://localhost:3000/api/auth/users/1
+Content-Type: application/json
+
+{
+    
+    "username": "Muhia Sam",
+    "email": "eb2.56060.21@student.chuka.ac.ke",
+    "role": "user"
+}

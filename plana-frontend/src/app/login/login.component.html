@@ -1,0 +1,46 @@
+<!-- login.component.html -->
+<div class="navbar">
+  <div class="navbar-title">
+      <img src="https://p7.hiclipart.com/preview/114/481/310/simple-plan-logo-graphic-designer-printing-blink-182.jpg" alt="">
+      <a href="#"> PLANA</a>
+  </div>
+  <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Clients</a>
+  </div>
+  <div class="iconsi">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter-square" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      <i class="fa fa-pencil-square" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="body">
+  <div class="container">
+      <div id="login-form" class="form-container active">
+        <h2>Login</h2>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <label for="login-email">Email</label>
+          <input type="text" id="login-email" formControlName="email" [ngClass]="{'is-invalid': submitted && f['email'].errors}">
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">Email must be a valid email address</div>
+          </div>
+          
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" formControlName="password" [ngClass]="{'is-invalid': submitted && f['password'].errors}">
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Password is required</div>
+          </div>
+          
+          <input type="submit" value="Submit">
+        </form>
+        <p class="text">Not registered yet? <button routerLink="/register" id="show-register" type="button">Sign Up</button></p>
+      </div>
+    </div>
+    
+</div>

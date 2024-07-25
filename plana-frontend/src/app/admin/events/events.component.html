@@ -1,0 +1,97 @@
+<div class="mainly">
+    <div class="navbar">
+      <div class="navbar-title">
+        <a href="#">PLANA</a>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="mani">
+      <div class="lefty">
+        <div class="profile">
+          <img src="https://pics.craiyon.com/2023-10-25/b65f72d6d11a48c1bc560059cc36e31f.webp" alt="">
+        </div>
+        <div class="dashboard">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <button routerLink="/events">Dashboard</button>
+        </div>
+        <div class="myprofile">
+          <i class="fa fa-user-md" aria-hidden="true"></i>
+          <button routerLink="/adminprofile">Profile</button>
+        </div>
+        <div class="viewevents">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <button routerLink="/users">View Users</button>
+        </div>
+        <div class="mail">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <button>Mail</button>
+        </div>
+        <div class="settings">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+          <button>Settings</button>
+        </div>
+        <div class="logout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <button routerLink="/landing">Log Out</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="topcards">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="tu">Total Users</h2>
+            </div>
+            <div class="card-body">
+              <p>{{ totalUsers }}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="te">Total Events</h2>
+            </div>
+            <div class="card-body">
+              <p>{{ totalEvents }}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="tb">Total Bookings</h2>
+            </div>
+            <div class="card-body">
+              <p>{{ totalBookings }}</p>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="ta">Total Earnings</h2>
+            </div>
+            <div class="card-body">
+              <p>${{ totalEarnings }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="tbl">
+          <h2>Top Events</h2>
+          <table>
+            <tr>
+              <th>Event Title</th>
+              <th>No of Bookings</th>
+              <th>Total Earnings</th>
+            </tr>
+            <tr *ngFor="let event of events">
+              <td>{{ event.title }}</td>
+              <td>{{ event.bookings.length }}</td>
+              <td>${{ event.totalEarnings }}</td>
+            </tr>
+          </table>
+          <button>View All Events</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

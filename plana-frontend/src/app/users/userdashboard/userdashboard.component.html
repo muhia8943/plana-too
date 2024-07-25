@@ -1,0 +1,172 @@
+<div class="mainly">
+  <div class="navbar">
+    <div class="navbar-title">
+      <a href="#"> PLANA</a>
+    </div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+  <div class="mani">
+    <div class="lefty">
+      <div class="profile">
+        <img src="https://pics.craiyon.com/2023-10-25/b65f72d6d11a48c1bc560059cc36e31f.webp" alt="">
+      </div>
+      <div class="dashboard">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        <button routerLink="/userdashboard">Home</button>
+      </div>
+      <div class="myprofile">
+        <i class="fa fa-user-md" aria-hidden="true"></i>
+        <button routerLink="/userprofile">Profile</button>
+      </div>
+      <div class="mail">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <button>Mail</button>
+      </div>
+      <div class="bookings">
+        <i class="fa fa-book" aria-hidden="true"></i>
+        <button routerLink="/bookings">My Bookings</button>
+      </div>
+      <div class="settings">
+        <i class="fa fa-cogs" aria-hidden="true"></i>
+        <button>Settings</button>
+      </div>
+      <div class="logout">
+        <i class="fa fa-sign-out" aria-hidden="true"></i>
+        <button routerLink="/landing">Log Out</button>
+      </div>
+    </div>
+    <div class="content">
+      <div class="hello">
+        <h1> Hello Samuel!</h1>
+        <p>It's nice to meet you</p>
+      </div>
+      <div class="maincontent">
+        <div class="maincontent1">
+          <h4>Events Available</h4>
+          <input type="text" placeholder="Search Events ...">
+        </div>
+        <div class="maincontent2">
+          <label for="category">Sort by Category</label>
+          <select name="category" id="category">
+            <option value="educative">Educative</option>
+            <option value="adventure">Adventure</option>
+            <option value="religious">Religious</option>
+            <option value="cultural">Cultural</option>
+          </select>
+        </div>
+      </div>
+      <div class="cats">
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2024/05/23/12/25/ai-generated-8783123_1280.png" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Cultural Events</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2024/05/17/08/06/ai-generated-8767680_1280.jpg" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Educative Events</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2024/05/18/18/13/concert-8770776_1280.jpg" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Musical Concerts Events</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2013/07/13/12/51/lady-160472_1280.png" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Cinematic Events</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2023/05/26/12/31/couple-8019370_1280.jpg" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Wedding planning</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+        <div class="cultural">
+            <div class="cimg">
+                <img src="https://cdn.pixabay.com/photo/2024/02/01/10/55/heart-8545742_1280.jpg" alt="Image 2">
+            </div>
+            <div class="lin">
+                <h4>Valentine Events</h4>
+                <p>Learn and experience cultures</p>
+            </div>
+        </div>
+    </div>
+
+      <div *ngIf="showTicketsModal" class="tickets-modal">
+        <div class="modal-content">
+          <span class="close-button" (click)="closeTicketsModal()">&times;</span>
+          <h2>Tickets for Event {{ selectedEvent?.Title }}</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Ticket ID</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ticket of tickets">
+                <td>{{ ticket.TicketID }}</td>
+                <td>{{ ticket.TicketType }}</td>
+                <td>{{ ticket.Price | currency }}</td>
+                <td><button (click)="bookTicket(ticket.TicketID)">BOOK TICKET</button></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="events">
+        <div *ngFor="let event of events" class="card">
+          <div class="content-header">
+            <div class="imagecard">
+              <img [src]="event.EventImage" alt="">
+            </div>
+            <h5>{{ event.Title }}</h5>
+            <p>{{ event.Description }}</p>
+            <div class="price-date">
+              <p class="pri">Price-Range:</p><p>{{ event.Price | currency }}</p>
+            </div>
+            <div class="lkl">
+              <p class="pri">Date:</p><p>{{ event.Date | date: 'MM/dd/yyyy hh:mm a' }}</p>
+            </div>
+            <div class="location">
+              <p>Location:</p><p>{{ event.Location }}</p>
+            </div>
+            <div class="buttons">
+              <button [routerLink]="['/event', event.EventID]">VIEW</button>
+              <button (click)="getTickets(event.EventID)">GET TICKETS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="event-detail">
+    <div class="content-header">
+      <div class="imagecard">
+        <img [src]="event.EventImage" alt="">
+      </div>
+      <h1>{{ event.Title }}</h1>
+      <p>{{ event.Description }}</p>
+      <div class="price-date">
+        <p class="pri">Price-Range:</p><p>{{ event.Price | currency }}</p>
+      </div>
+      <div class="lkl">
+        <p class="pri">Date:</p><p>{{ event.Date | date: 'MM/dd/yyyy hh:mm a' }}</p>
+      </div>
+      <div class="location">
+        <p>Location:</p><p>{{ event.Location }}</p>
+      </div>
+      <div class="btn">
+        <button>GET TICKETS</button>
+      </div>
+    </div>
+  </div>
+  

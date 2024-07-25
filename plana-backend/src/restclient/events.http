@@ -1,0 +1,51 @@
+### Create a New Event
+POST http://localhost:3000/api/events
+Content-Type: application/json
+
+{
+    "Title": "visit  museum",
+    "Category": "Entertainment",
+    "Description": "A live music concert featuring top artists.",
+    "Date": "2024-08-01T19:00:00Z",
+    "Time": "2024-08-01T19:00:00Z",
+    "Location": "Central Park",
+    "Price": 50.00,
+    "EventImage": "concert.jpg"
+}
+
+###
+
+### Get All Events
+GET http://localhost:3000/api/events
+Content-Type: application/json
+
+###
+
+### Get Event by ID
+GET http://localhost:3000/api/events/1
+Content-Type: application/json
+
+###
+
+### Update an Event
+PUT http://localhost:3000/api/events/3
+Content-Type: application/json
+
+{
+    "Title": "Updated Music Concert",
+    "Category": "Music",
+    "Description": "An updated description of the live music concert.",
+    "Date": "2024-08-02T19:00:00Z",
+    "Time": "2024-08-02T19:00:00Z",
+    "Location": "Central Park",
+    "Price": 60.00,
+    "EventImage": "https://lightoflove.com.ph/wp-content/uploads/2024/04/5-wedding-reception-venue-theme-ideas-for-2023.jpg"
+}
+
+###
+
+### Delete an Event
+DELETE http://localhost:3000/api/events/5
+Content-Type: application/json
+
+###

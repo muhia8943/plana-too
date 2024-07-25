@@ -1,0 +1,31 @@
+.event-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .event-detail .content-header {
+    text-align: center;
+  }
+  
+  .event-detail .imagecard img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .event-detail .pri {
+    font-weight: bold;
+  }
+  
+  .event-detail .price-date,
+  .event-detail .lkl,
+  .event-detail .location {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+  

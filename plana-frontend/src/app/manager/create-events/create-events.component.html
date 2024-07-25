@@ -1,0 +1,85 @@
+<div class="mainly">
+    <div class="navbar">
+      <div class="navbar-title">
+        <a href="#">PLANA</a>
+      </div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="mani">
+      <div class="lefty">
+        <div class="profile">
+          <img src="https://pics.craiyon.com/2023-10-25/b65f72d6d11a48c1bc560059cc36e31f.webp" alt="">
+        </div>
+        <div class="dashboard">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <button routerLink="/manager">Home</button>
+        </div>
+        <div class="myprofile">
+          <i class="fa fa-user-md" aria-hidden="true"></i>
+          <button>Profile</button>
+        </div>
+        <div class="mail">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <button>Mail</button>
+        </div>
+        <div class="createevent">
+          <i class="fa fa-pencil-square" aria-hidden="true"></i>
+          <button>Create Event</button>
+        </div>
+        <div class="createtickets">
+          <i class="fa fa-pencil-square" aria-hidden="true"></i>
+          <button routerLink="/createtickets">Create Tickets</button>
+      </div>
+        <div class="viewevents">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <button routerLink="/viewevents">View Events</button>
+        </div>
+        <div class="bookings">
+          <i class="fa fa-book" aria-hidden="true"></i>
+          <button routerLink="/viewbookings">Bookings</button>
+        </div>
+        <div class="settings">
+          <i class="fa fa-cogs" aria-hidden="true"></i>
+          <button>Settings</button>
+        </div>
+        <div class="logout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <button routerLink="/landing">Log Out</button>
+        </div>
+      </div>
+      <div class="content">
+        <div class="hello">
+          <h1>Hello Manager!</h1>
+          <p>Let's create events.</p>
+        </div>
+        <div class="maincontent">
+          <h4>Create Events</h4>
+          <form [formGroup]="eventForm" (ngSubmit)="onSubmit()" class="eform">
+            <label for="title">Title</label>
+            <input type="text" id="title" formControlName="Title">
+            <label for="category">Category</label>
+            <input type="text" id="category" formControlName="Category"> <br>
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="Description" rows="4"></textarea>
+            <label for="date">Date</label>
+            <input type="date" id="date" formControlName="Date"><br>
+            <label for="time">Time</label>
+            <input type="time" id="time" formControlName="Time"> <br>
+            <label for="location">Location</label>
+            <input type="text" id="location" formControlName="Location">
+            <label for="price">Price-Range</label>
+            <input type="number" id="price" formControlName="Price"> <br>
+            <label for="imageUrl">Event Image URL</label>
+            <input type="url" id="EventImage" formControlName="EventImage"> <br>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  

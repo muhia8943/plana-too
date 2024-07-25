@@ -1,0 +1,15 @@
+CREATE TABLE Events (
+    EventID INT IDENTITY(1,1) PRIMARY KEY,
+    Title VARCHAR(100) NOT NULL,
+    Category VARCHAR(50),
+    Description TEXT,
+    Date DATE NOT NULL,
+    Time TIME NOT NULL,
+    Location VARCHAR(255) NOT NULL, 
+    Price DECIMAL(10,2),
+    EventImage VARCHAR(255) NOT NULL,
+    CreatedAt DATETIME DEFAULT GETDATE() NOT NULL,
+    UpdatedAt DATETIME DEFAULT GETDATE() NOT NULL
+);
+
+DROP TABLE Events

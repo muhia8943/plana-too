@@ -1,0 +1,46 @@
+### Create a New Ticket
+POST http://localhost:3000/api/tickets
+Content-Type: application/json
+
+{
+    "EventID": 1,
+    "TicketType": "single",
+    "Price": 250.00
+}
+
+###
+
+### Update an Existing Ticket
+PUT http://localhost:3000/api/tickets/1
+Content-Type: application/json
+
+{
+    "EventID": 1,
+    "TicketType": "V.I.P",
+    "Price": 750.00
+}
+
+###
+
+### Delete a Ticket
+DELETE http://localhost:3000/api/tickets/1
+Content-Type: application/json
+
+###
+
+### Get All Tickets
+GET http://localhost:3000/api/tickets
+Content-Type: application/json
+
+###
+
+### Get Ticket By ID
+GET http://localhost:3000/api/tickets/1
+Content-Type: application/json
+
+###
+### Get ticket by EventID
+GET http://localhost:3000/api/tickets/event/1
+Content-Type: application/json
+
+###

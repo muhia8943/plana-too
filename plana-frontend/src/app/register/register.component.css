@@ -1,0 +1,118 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-top: 1px;
+  background-color: rgb(249, 245, 228);
+}
+.nav-links{
+  display: flex;
+  gap: 20px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+.nav-links a:hover {
+  text-decoration: underline;
+  color: salmon;
+}
+.navbar-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0px;
+}
+.navbar-title img{
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  
+}
+.navbar-title{
+  margin-left: 90px;
+}
+.register-container {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .firstcontainer{
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2016/03/27/20/54/wedding-reception-1284245_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .register-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .register-container form {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  .register-container label {
+    margin-bottom: 10px;
+  }
+  
+  .register-container input[type="text"],
+  .register-container input[type="email"],
+  .register-container input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  .register-container button {
+    background-color:rgb(30, 30, 30);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .register-container button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  .success-message {
+    color: green;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid lightgreen;
+    border-radius: 5px;
+  }
+ #show-Login {
+    color: #007BFF;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+.logimage img{
+  width: 200px;
+  height: 390px;
+  margin-top: 4px;
+}
+  
+  

@@ -1,0 +1,46 @@
+<div class="navbar">
+  <div class="navbar-title">
+      <img src="https://p7.hiclipart.com/preview/114/481/310/simple-plan-logo-graphic-designer-printing-blink-182.jpg" alt="">
+      <a href="#"> PLANA</a>
+  </div>
+  <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Clients</a>
+  </div>
+  <div class="iconsi">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+      <i class="fa fa-twitter-square" aria-hidden="true"></i>
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+      <i class="fa fa-pencil-square" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="firstcontainer">
+  <div class="register-container">
+    <h2>Register</h2>
+  
+    <!-- Success message -->
+    <div *ngIf="successMessage" class="success-message">
+      {{ successMessage }}
+    </div>
+  
+    <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+      <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required [(ngModel)]="user.username" name="username" #username="ngModel">
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required [(ngModel)]="user.email" name="email" #email="ngModel">
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required [(ngModel)]="user.password" name="password" #password="ngModel">
+      </div>
+      <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
+    </form>
+  </div>
+</div>
